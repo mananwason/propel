@@ -1,7 +1,9 @@
 package com.propel.bluemix.propel;
 
 import android.app.DatePickerDialog;
+import android.support.v4.app.FragmentManager;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,9 +16,15 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
 
+import com.ibm.mobile.services.data.IBMDataObject;
+import com.propel.bluemix.propel.Data.Item;
+import com.propel.bluemix.propel.Fragments.PostFragment;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+
+import bolts.Continuation;
 
 public class PostActivity extends AppCompatActivity {
     Calendar myCalendar = Calendar.getInstance();
@@ -53,6 +61,33 @@ public class PostActivity extends AppCompatActivity {
             }
 
         };
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String title = goal.getText().toString();
+                String descr = description.getText().toString();
+                String date = pickdate.getText().toString();
+                String time = picktime.getText().toString();
+                String date_time = date+"T"+time;
+                Item item  = new Item(title,descr,date_time);
+
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("item", item);
+                PostFragment fragment = new PostFragment();
+                fragment.setArguments(bundle);
+
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame, fragment).commit();
+
+//                Intent intent = new Intent();
+//                intent.setClass(PostActivity.this, PostFragment.class);
+//                intent.putExtra("myItem", myItem);
+//                startActivity(intent);
+            }
+        });
+
         pickdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
