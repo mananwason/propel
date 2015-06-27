@@ -112,7 +112,7 @@ public final class BlueListApplication extends Application {
 		// Initialize the IBM Data Service.
 		IBMData.initializeService();
 		// Register the Item Specialization.
-		Item.registerSpecialization(Item.class);
+		//Item.registerSpecialization(Item.class);
 	}
 
 	/**

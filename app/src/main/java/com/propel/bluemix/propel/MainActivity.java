@@ -72,13 +72,11 @@ public class MainActivity extends AppCompatActivity {
                         switch (id) {
                             case R.id.nav_feed:
                                 fragmentManager.beginTransaction()
-                                        .replace(R.id.content_frame, new ViewFragment()).commit();
+                                        .replace(R.id.content_frame, new PostFragment()).commit();
                                 break;
                             case R.id.nav_updates:
                                 Intent post = new Intent(MainActivity.this, PostActivity.class);
                                 startActivity(post);
-//                                fragmentManager.beginTransaction()
-//                                        .replace(R.id.content_frame, new PostFragment()).commit();
                                 break;
 
 
