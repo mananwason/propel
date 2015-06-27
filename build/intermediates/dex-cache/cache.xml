@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\MananWason\AppData\Local\Android1\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="D:\android\android\hackathon apps\propel\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-105a35d14f4a3d3f39717a027d5e6365d9bdd253.jar" />
+    </item>
+    <item
+        jar="D:\android\android\hackathon apps\propel\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="D:\android\android\hackathon apps\propel\app\build\intermediates\pre-dexed\debug\classes-265c64db1a2921560d5af429f1b3d3976ab1e234.jar" />
+    </item>
+    <item
+        jar="C:\Users\MananWason\.gradle\caches\modules-2\files-2.1\com.ibm.mobile.services\ibmbluemix\1.0.1.20150311-1224\7bdbbcf8f380f8dd86e62b8cc88f36eec2ad2914\ibmbluemix-1.0.1.20150311-1224.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="7bdbbcf8f380f8dd86e62b8cc88f36eec2ad2914">
+        <dex dex="D:\android\android\hackathon apps\propel\app\build\intermediates\pre-dexed\debug\ibmbluemix-1.0.1.20150311-1224-d2c1caef88dff23666f3ae9935da4a7368132b48.jar" />
+    </item>
+    <item
+        jar="C:\Users\MananWason\.gradle\caches\modules-2\files-2.1\com.ibm.mobile.services\ibmfilesync\1.0.1.20150311-1224\c9c2a97cdf54089bcc736b0589d299f3886c5257\ibmfilesync-1.0.1.20150311-1224.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="c9c2a97cdf54089bcc736b0589d299f3886c5257">
+        <dex dex="D:\android\android\hackathon apps\propel\app\build\intermediates\pre-dexed\debug\ibmfilesync-1.0.1.20150311-1224-75ceb964bc23bd41e3dce658d927427d29f64955.jar" />
+    </item>
+    <item
+        jar="D:\android\android\hackathon apps\propel\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="D:\android\android\hackathon apps\propel\app\build\intermediates\pre-dexed\debug\classes-4fe499a7ff8242b1dda540e95d99b5bc84f6306d.jar" />
+    </item>
+    <item
+        jar="D:\android\android\hackathon apps\propel\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="D:\android\android\hackathon apps\propel\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-d8d238cd75d526ef008808822282c51e90a27bff.jar" />
+    </item>
+    <item
+        jar="C:\Users\MananWason\.gradle\caches\modules-2\files-2.1\com.ibm.mobile.services\ibmdata\1.0.1.20150311-1224\a589c20860ad3cdfa77ba4c6449cc1dda410d93\ibmdata-1.0.1.20150311-1224.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="0a589c20860ad3cdfa77ba4c6449cc1dda410d93">
+        <dex dex="D:\android\android\hackathon apps\propel\app\build\intermediates\pre-dexed\debug\ibmdata-1.0.1.20150311-1224-ad6d1a06884daba7124d2fc28591407eadf0e408.jar" />
+    </item>
+    <item
+        jar="D:\android\android\hackathon apps\propel\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="D:\android\android\hackathon apps\propel\app\build\intermediates\pre-dexed\debug\classes-6a37af60afdefcbd6c9a748e061636b8a547079c.jar" />
+    </item>
+
+</items>
