@@ -11,9 +11,7 @@ import com.propel.bluemix.propel.R;
 
 import java.util.List;
 
-/**
- * Created by MananWason on 27-06-2015.
- */
+
 public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.Viewholder> {
 
     List<Item> items;
@@ -33,8 +31,9 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.Viewholder> 
     @Override
     public void onBindViewHolder(Viewholder viewholder, int i) {
         Item current = items.get(i);
-        viewholder.title.setText(current.getGoal());
-
+        viewholder.goal.setText(current.getName());
+        viewholder.description.setText(current.getDescription());
+        viewholder.date.setText( current.getPost_date().toString());
     }
 
     @Override
@@ -43,12 +42,18 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.Viewholder> 
     }
 
     class Viewholder extends RecyclerView.ViewHolder {
-        TextView title;
+        TextView goal;
+        TextView description;
+        TextView date;
 
         public Viewholder(View itemView) {
             super(itemView);
             itemView.setClickable(true);
-            title = (TextView) itemView.findViewById(R.id.goal_title);
+            goal = (TextView) itemView.findViewById(R.id.goal_title);
+            description = (TextView) itemView.findViewById(R.id.goal_descr);
+            date = (TextView) itemView.findViewById(R.id.goal_date);
+
+
         }
 
     }

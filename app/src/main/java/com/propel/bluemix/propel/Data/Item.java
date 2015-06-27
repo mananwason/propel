@@ -1,27 +1,28 @@
 package com.propel.bluemix.propel.Data;
 
+import com.ibm.mobile.services.data.IBMDataObject;
+import com.ibm.mobile.services.data.IBMDataObjectSpecialization;
+
 import java.util.Date;
 
-/**
- * Created by MananWason on 27-06-2015.
- */
-public class Item {
-    String goal;
+@IBMDataObjectSpecialization("Item")
+public class Item extends IBMDataObject {
+    String name;
     String description;
     Date post_date;
 
-    public Item(Date post_date, String goal, String description) {
+    public Item(Date post_date, String name, String description) {
         this.post_date = post_date;
-        this.goal = goal;
+        this.name = name;
         this.description = description;
     }
 
-    public String getGoal() {
-        return goal;
+    public String getName() {
+        return name;
     }
 
-    public void setGoal(String goal) {
-        this.goal = goal;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {

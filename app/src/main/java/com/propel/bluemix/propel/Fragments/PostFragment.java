@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.ibm.mobile.services.data.IBMData;
+import com.ibm.mobile.services.data.IBMDataObject;
 import com.propel.bluemix.propel.Adapters.PostsAdapter;
 import com.propel.bluemix.propel.Data.Item;
 import com.propel.bluemix.propel.PostActivity;
@@ -18,13 +20,12 @@ import com.propel.bluemix.propel.R;
 import com.propel.bluemix.propel.Utils.BlueListApplication;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-/**
- * Created by MananWason on 27-06-2015.
- */
+import bolts.Continuation;
+import bolts.Task;
+
 public class PostFragment extends Fragment {
     BlueListApplication blApplication;
     RecyclerView recyclerView;
@@ -33,26 +34,35 @@ public class PostFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        IBMData dataService = IBMData.initializeService();  //Initializing object storage capability
+
+//        IBMFileSync fileSync = IBMFIleSync.initializeService();  //Initializing file storage capability
+
+        Item.registerSpecialization(Item.class);  //Registering a specialization
+
         final View view = inflater.inflate(R.layout.fragment_posts, container, false);
         recyclerView = (RecyclerView) view.findViewById(R.id.list_posts);
 
-        List<Item> posts = new ArrayList<>();
-        Calendar calendar = Calendar.getInstance();
 
-        int thisYear = calendar.get(Calendar.YEAR);
+        final List<Item> posts = new ArrayList<>();
+        long msTime = System.currentTimeMillis();
+        Date curDateTime = new Date(msTime);
 
+        Item item = new Item(curDateTime,"Naman", "aaa");
+        item.save().continueWith(new Continuation<IBMDataObject, Void>() {
 
-        int thisMonth = calendar.get(Calendar.MONTH);
-
-        int thisDay = calendar.get(Calendar.DAY_OF_MONTH);
-
-
-        Item item = new Item(new Date(thisYear, thisMonth, thisDay), "abcd", "asd");
-
-
-        posts.add(item);
+            @Override
+            public Void then(Task<IBMDataObject> task) throws Exception {
+                if (task.isFaulted()) {
+                    // Handle errors
+                } else {
+                    Item myItem = (Item) task.getResult();
+                    posts.add(myItem);
+                }
+                return null;
+            }
+        });
         postsAdapter = new PostsAdapter(posts);
-
         recyclerView.setAdapter(postsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         FloatingActionButton fab_add_post = (FloatingActionButton) view.findViewById(R.id.fab_add_post);
