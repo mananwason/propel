@@ -20,7 +20,6 @@ import com.propel.bluemix.propel.R;
 import com.propel.bluemix.propel.Utils.BlueListApplication;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import bolts.Continuation;
@@ -45,10 +44,11 @@ public class PostFragment extends Fragment {
 
 
         final List<Item> posts = new ArrayList<>();
-        long msTime = System.currentTimeMillis();
-        Date curDateTime = new Date(msTime);
 
-        Item item = new Item(curDateTime,"Naman", "aaa");
+
+        Bundle bundle=getArguments();
+        Item item = (Item) bundle.getSerializable("item");
+
         item.save().continueWith(new Continuation<IBMDataObject, Void>() {
 
             @Override
