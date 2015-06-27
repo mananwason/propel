@@ -19,4 +19,8 @@
     <string name="view_feed">Updates</string>
     <string name="title_activity_post">PostActivity</string>
 
+    <!--Buttons-->
+    <string name="date_picker">Pick date</string>
+    <string name="time_picker">Pick time</string>
+
 </resources>

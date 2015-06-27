@@ -1,19 +1,32 @@
 package com.propel.bluemix.propel;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TimePicker;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class PostActivity extends AppCompatActivity {
+    Calendar myCalendar = Calendar.getInstance();
     private Toolbar mToolbar;
     private EditText goal;
+    private EditText pickdate;
+    private EditText picktime;
     private EditText description;
-    private EditText date_time;
     private Button submit;
+    private DatePickerDialog.OnDateSetListener date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +34,52 @@ public class PostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_post);
         setUpToolbar();
 
-
         goal = (EditText) findViewById(R.id.edit_goal);
         description = (EditText) findViewById(R.id.edit_descr);
-        date_time = (EditText) findViewById(R.id.edit_date);
-        submit  = (Button) findViewById(R.id.submit_post);
+        submit = (Button) findViewById(R.id.submit_post);
+        pickdate = (EditText) findViewById(R.id.date);
+        picktime = (EditText) findViewById(R.id.time);
+
+        myCalendar = Calendar.getInstance();
+        date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
+
+        };
+        pickdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pickdate.setInputType(InputType.TYPE_NULL);
+                new DatePickerDialog(PostActivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+        picktime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                picktime.setInputType(InputType.TYPE_NULL);
+                Calendar mcurrentTime = Calendar.getInstance();
+                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                int minute = mcurrentTime.get(Calendar.MINUTE);
+                TimePickerDialog mTimePicker;
+                mTimePicker = new TimePickerDialog(PostActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                        picktime.setText( selectedHour + ":" + selectedMinute);
+                    }
+                }, hour, minute, true);//Yes 24 hour time
+                mTimePicker.setTitle("Select Time");
+                mTimePicker.show();
+            }
+        });
 
 
     }
@@ -57,5 +111,13 @@ public class PostActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void updateLabel() {
+
+        String myFormat = "MM/dd/yy"; //In which you need put here
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+        pickdate.setText(sdf.format(myCalendar.getTime()));
     }
 }
