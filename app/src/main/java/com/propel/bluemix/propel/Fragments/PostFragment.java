@@ -10,7 +10,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.propel.bluemix.propel.Adapters.PostsAdapter;
 import com.propel.bluemix.propel.Data.Item;
@@ -19,6 +18,8 @@ import com.propel.bluemix.propel.R;
 import com.propel.bluemix.propel.Utils.BlueListApplication;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -36,11 +37,20 @@ public class PostFragment extends Fragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.list_posts);
 
         List<Item> posts = new ArrayList<>();
-        Item item = new Item("abcd");
-        Item item1 = new Item("manan");
+        Calendar calendar = Calendar.getInstance();
+
+        int thisYear = calendar.get(Calendar.YEAR);
+
+
+        int thisMonth = calendar.get(Calendar.MONTH);
+
+        int thisDay = calendar.get(Calendar.DAY_OF_MONTH);
+
+
+        Item item = new Item(new Date(thisYear, thisMonth, thisDay), "abcd", "asd");
+
 
         posts.add(item);
-        posts.add(item1);
         postsAdapter = new PostsAdapter(posts);
 
         recyclerView.setAdapter(postsAdapter);
@@ -49,7 +59,7 @@ public class PostFragment extends Fragment {
         fab_add_post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(view.getContext(), "FAB pressed", Toast.LENGTH_SHORT).show();
+                // Toast.makeText(view.getContext(), "FAB pressed", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(getActivity(), PostActivity.class);
                 startActivity(intent);

@@ -1,24 +1,20 @@
 package com.propel.bluemix.propel;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.format.Time;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.util.Date;
-
 public class PostActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private EditText goal;
     private EditText description;
-    private EditText date;
-    private EditText time;
+    private EditText date_time;
     private Button submit;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +24,9 @@ public class PostActivity extends AppCompatActivity {
 
         goal = (EditText) findViewById(R.id.edit_goal);
         description = (EditText) findViewById(R.id.edit_descr);
-        date = (EditText) findViewById(R.id.edit_date);
-        time = (EditText) findViewById(R.id.edit_time);
+        date_time = (EditText) findViewById(R.id.edit_date);
         submit  = (Button) findViewById(R.id.submit_post);
+
 
     }
 

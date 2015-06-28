@@ -2,18 +2,65 @@
 <items version="2" >
 
     <item
-        jar="D:\android\android\hackathon apps\propel\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="97f7e239e86ef994de894818fdd8a71d2e89d6aa">
-        <dex dex="D:\android\android\hackathon apps\propel\app\build\intermediates\pre-dexed\debug\classes-4164a809da72107933730a4af43641b954a05e99.jar" />
+        jar="E:\Work\Projects\propel\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false" revision="23.0.0 rc2" sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
+        <dex
+            dex="E:\Work\Projects\propel\app\build\intermediates\pre-dexed\debug\classes-23cd5ae64b4a531aea16abaf77c027cd6c0a75de.jar" />
     </item>
     <item
-        jar="D:\android\android\hackathon apps\propel\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.2.0\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc2"
-        sha1="5b37cf49773f7f17aca9830efd3053b0cac56728">
-        <dex dex="D:\android\android\hackathon apps\propel\app\build\intermediates\pre-dexed\debug\classes-016368f3efd3be355a0fa8a9d7c0899eeab39303.jar" />
+        jar="E:\Work\Projects\propel\app\build\intermediates\exploded-aar\com.android.support\design\22.2.0\jars\classes.jar"
+        jumboMode="false" revision="23.0.0 rc2" sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex
+            dex="E:\Work\Projects\propel\app\build\intermediates\pre-dexed\debug\classes-fbf97b2ded789bcf4ca4df449b2ca67e83658783.jar" />
+    </item>
+    <item
+        jar="C:\Users\Naman\.gradle\caches\modules-2\files-2.1\com.ibm.mobile.services\ibmdata\1.0.1.20150311-1224\a589c20860ad3cdfa77ba4c6449cc1dda410d93\ibmdata-1.0.1.20150311-1224.jar"
+        jumboMode="false" revision="23.0.0 rc2" sha1="0a589c20860ad3cdfa77ba4c6449cc1dda410d93">
+        <dex
+            dex="E:\Work\Projects\propel\app\build\intermediates\pre-dexed\debug\ibmdata-1.0.1.20150311-1224-a4a926aa50a935f45454c65c5cf96c8412d02e45.jar" />
+    </item>
+    <item
+        jar="E:\Work\Projects\propel\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\22.2.0\jars\classes.jar"
+        jumboMode="false" revision="23.0.0 rc2"
+        sha1="97f7e239e86ef994de894818fdd8a71d2e89d6aa">
+        <dex
+            dex="E:\Work\Projects\propel\app\build\intermediates\pre-dexed\debug\classes-5dc329c2b4f3642781251a858821515fe4d720bc.jar" />
+    </item>
+    <item
+        jar="E:\Work\Projects\propel\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false" revision="23.0.0 rc2" sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex
+            dex="E:\Work\Projects\propel\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-29093d5927084fcd10568cc71a8e501ec8786f70.jar" />
+    </item>
+    <item
+        jar="C:\Users\Naman\.gradle\caches\modules-2\files-2.1\com.ibm.mobile.services\ibmfilesync\1.0.1.20150311-1224\c9c2a97cdf54089bcc736b0589d299f3886c5257\ibmfilesync-1.0.1.20150311-1224.jar"
+        jumboMode="false" revision="23.0.0 rc2" sha1="c9c2a97cdf54089bcc736b0589d299f3886c5257">
+        <dex
+            dex="E:\Work\Projects\propel\app\build\intermediates\pre-dexed\debug\ibmfilesync-1.0.1.20150311-1224-03a146143eaa244c1a0e82a64d7d41836e399b7f.jar" />
+    </item>
+    <item
+        jar="E:\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false" revision="23.0.0 rc2" sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex
+            dex="E:\Work\Projects\propel\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-a9a661a81c6b316fe214d95dbd0ef4d579ab262f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Naman\.gradle\caches\modules-2\files-2.1\com.ibm.mobile.services\ibmbluemix\1.0.1.20150311-1224\7bdbbcf8f380f8dd86e62b8cc88f36eec2ad2914\ibmbluemix-1.0.1.20150311-1224.jar"
+        jumboMode="false" revision="23.0.0 rc2" sha1="7bdbbcf8f380f8dd86e62b8cc88f36eec2ad2914">
+        <dex
+            dex="E:\Work\Projects\propel\app\build\intermediates\pre-dexed\debug\ibmbluemix-1.0.1.20150311-1224-726ed44291aa46636b2e9310a2d84c8bbd5b2f62.jar" />
+    </item>
+    <item
+        jar="E:\Work\Projects\propel\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false" revision="23.0.0 rc2" sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex
+            dex="E:\Work\Projects\propel\app\build\intermediates\pre-dexed\debug\classes-051b2732e0844de5430180c5bf5585de5591fc51.jar" />
+    </item>
+    <item
+        jar="E:\Work\Projects\propel\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false" revision="23.0.0 rc2" sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex
+            dex="E:\Work\Projects\propel\app\build\intermediates\pre-dexed\debug\classes-ba5f249e49663c4710a0e157dd0428f09f2b1cdc.jar" />
     </item>
 
 </items>
